@@ -6,6 +6,16 @@ Technology used:
 - django-autofixtures (https://github.com/gregmuellegger/django-autofixture) - For generating test data.
 - Materialize CSS - For template styling.
 
+## How to use this project
+
+This project uses Python 3 and also pip to manage dependencies.
+
+- Clone the repository using Git.
+- `pip install -r requirements.txt`
+- `python manage.py makemigrations`
+- `python manage.py migrate`
+- `python manage.py runserver`
+
 ## Generating test data
 
 Run the following command to generate some test data. You can alter the numeric values for more or less data.
