@@ -8,6 +8,13 @@ from django.views.generic import DetailView, ListView, UpdateView, CreateView, D
 from .models import Product, Category
 from .forms import ProductForm
 
+class IndexView(ListView):
+    template_name = 'product_manager/index.html'
+    
+    def get_queryset(self):
+            """ Return the last ten products. """
+            return Product.objects.order_by('-id')[:10]
+
 
 class ProductListView(ListView):
     """ Allows you to list all products. """
