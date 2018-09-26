@@ -17,7 +17,7 @@ urlpatterns = (
 urlpatterns += (
     # urls for Product
     path('product/', views.IndexView.as_view(), name='index'),
-    path('product/', views.ProductListView.as_view(), name='product_manager_product_list'),
+    path('product/list/', views.ProductListView.as_view(), name='product_manager_product_list'),
     path('product/create/', views.ProductCreateView.as_view(), name='product_manager_product_create'),
     path('product/detail/<slug:slug>/', views.ProductDetailView.as_view(), name='product_manager_product_detail'),
     path('product/update/<slug:slug>/', views.ProductUpdateView.as_view(), name='product_manager_product_update'),

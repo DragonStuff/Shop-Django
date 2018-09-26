@@ -26,6 +26,9 @@ class Product(models.Model):
     class Meta:
         ordering = ('-pk',)
 
+    def __str__(self):
+        return u'%s' % self.name
+
     def __unicode__(self):
         return u'%s' % self.slug
 
@@ -46,6 +49,9 @@ class Category(models.Model):
 
     class Meta:
         ordering = ('-pk',)
+
+    def __str__(self):
+        return u'%s' % self.name
 
     def __unicode__(self):
         return u'%s' % self.slug
