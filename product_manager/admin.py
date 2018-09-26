@@ -12,7 +12,7 @@ class ProductAdminForm(forms.ModelForm):
 class ProductAdmin(admin.ModelAdmin):
     form = ProductAdminForm
     list_display = ['name', 'slug', 'description', 'price']
-    readonly_fields = ['name', 'slug', 'description', 'price']
+    readonly_fields = ['slug']
 
 admin.site.register(Product, ProductAdmin)
 
@@ -27,7 +27,7 @@ class CategoryAdminForm(forms.ModelForm):
 class CategoryAdmin(admin.ModelAdmin):
     form = CategoryAdminForm
     list_display = ['name', 'slug']
-    readonly_fields = ['name', 'slug']
+    readonly_fields = ['slug']
 
 admin.site.register(Category, CategoryAdmin)
 
