@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<h2>Latest products</h2>
+	<table class="table">
+		<tr>
+			<td>Name</td>
+		    <td>Description</td>
+		    <td>Price ($)</td>
+		</tr>
+		{% for object in object_list %}
+			<tr>
+			    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+			    <td>{{ object.description }}</td>
+			    <td>${{ object.price }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<a class="btn btn-primary" href="{% url 'product_manager_product_list' %}">View More</a>
+{% endblock %}

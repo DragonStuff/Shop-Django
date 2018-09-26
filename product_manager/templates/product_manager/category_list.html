@@ -4,7 +4,7 @@
 	<div class="collection">
 	{% for object in object_list %}
 		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}
-		<span class="badge" data-badge-caption="">{{ build_counts.object }}</span></a>
+		<span class="badge" data-badge-caption="products">{{ object.category.count }}</span></a>
 	{% endfor %}
 	</div>
 

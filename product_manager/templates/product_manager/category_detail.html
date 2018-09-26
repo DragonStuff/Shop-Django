@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<h2>{{ object.name }}</h2>
+	<table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+          </tr>
+        </thead>
+		<tbody>
+		{% for product_item in products_in_category %}
+			<tr>
+				<td>{{ product_item.name }}</td>
+				<td>{{ product_item.description }}</td>
+				<td>{{ product_item.price }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+    </table>
+	<p><a class="btn btn-default" href="{% url 'product_manager_category_list' %}">Back</a></p>
+
+{% endblock %}
