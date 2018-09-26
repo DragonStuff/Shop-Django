@@ -20,7 +20,9 @@ class Product(models.Model):
 
     # Relationship Fields
     category = models.ForeignKey(
-        'Category', on_delete=models.CASCADE
+        'Category', 
+        on_delete=models.CASCADE,
+        related_name='category'
     )
 
     class Meta:

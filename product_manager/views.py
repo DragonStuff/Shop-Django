@@ -8,7 +8,9 @@ from django.views.generic import DetailView, ListView, UpdateView, CreateView, D
 from .models import Product, Category
 from .forms import ProductForm
 
+
 class IndexView(ListView):
+    """ This index view displays the last ten products created. """
     template_name = 'product_manager/index.html'
     
     def get_queryset(self):
@@ -52,3 +54,10 @@ class CategoryListView(ListView):
 class CategoryDetailView(DetailView):
     """ Allows you to view details of a category (will be used for inline product display). """
     model = Category
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of the current category taken from above context.
+        context['products_in_category'] = Product.objects.filter(category=context['object'])
+        return context
