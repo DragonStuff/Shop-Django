@@ -3,7 +3,8 @@
 {% block content %}
 	<div class="collection">
 	{% for object in object_list %}
-		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}<span class="badge" data-badge-caption="custom caption">4</span></a>
+		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}
+		<span class="badge" data-badge-caption="">{{ build_counts.object }}</span></a>
 	{% endfor %}
 	</div>
 
