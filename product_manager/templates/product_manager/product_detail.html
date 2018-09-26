@@ -8,10 +8,6 @@
 			<td>{{ object.name }}</td>
 		</tr>
 		<tr>
-			<td>slug</td>
-			<td>{{ object.slug }}</td>
-		</tr>
-		<tr>
 			<td>description</td>
 			<td>{{ object.description }}</td>
 		</tr>
@@ -20,7 +16,12 @@
 			<td>{{ object.price }}</td>
 		</tr>
 	</table>
-	<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Product</a>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Product</a>
+	</p>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_delete_url}}">Delete Product</a>
+	</p>
 	<p>
 		<a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Product Listing</a>
 	</p>

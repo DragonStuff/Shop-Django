@@ -37,10 +37,11 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('product_manager_product_detail', args=(self.slug,))
 
-
     def get_update_url(self):
         return reverse('product_manager_product_update', args=(self.slug,))
 
+    def get_delete_url(self):
+        return reverse('product_manager_product_delete', args=(self.slug,))
 
 class Category(models.Model):
 

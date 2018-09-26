@@ -34,7 +34,7 @@ class ProductDetailView(DetailView):
     model = Product
 
 
-class ProductDeletionView(DeleteView):
+class ProductDeleteView(DeleteView):
     """ Allows you to delete a product. """
     model = Product
     success_url = reverse_lazy('product_manager_product_list')
