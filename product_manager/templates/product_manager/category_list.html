@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<table class="table">
+	<tr>
+		<td>Link</td>
+	</tr>
+	
+	<div class="collection">
+	{% for object in object_list %}
+		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}<span class="badge" data-badge-caption="custom caption">4</span></a>
+	{% endfor %}
+	</div>
+
+	<p><a class="btn btn-default" href="{% url 'product_manager_category_list' %}">Back</a></p>
+{% endblock %}
