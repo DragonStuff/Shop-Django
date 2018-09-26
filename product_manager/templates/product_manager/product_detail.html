@@ -4,16 +4,16 @@
 
 	<table class="table">
 		<tr>
-			<td>name</td>
+			<td>Name</td>
 			<td>{{ object.name }}</td>
 		</tr>
 		<tr>
-			<td>description</td>
+			<td>Description</td>
 			<td>{{ object.description }}</td>
 		</tr>
 		<tr>
-			<td>price</td>
-			<td>{{ object.price }}</td>
+			<td>Price ($)</td>
+			<td>${{ object.price }}</td>
 		</tr>
 	</table>
 	<p>
@@ -23,7 +23,7 @@
 		<a class="btn btn-primary" href="{{object.get_delete_url}}">Delete Product</a>
 	</p>
 	<p>
-		<a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Product Listing</a>
+		<a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Back</a>
 	</p>
 
 {% endblock %}

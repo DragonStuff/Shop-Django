@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+	<h2>Categories</h2>
 	<div class="collection">
 	{% for object in object_list %}
 		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}

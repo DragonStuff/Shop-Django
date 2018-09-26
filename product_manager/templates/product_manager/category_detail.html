@@ -7,16 +7,16 @@
         <thead>
           <tr>
               <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
+              <th>Description</th>
+              <th>Price ($)</th>
           </tr>
         </thead>
 		<tbody>
 		{% for product_item in products_in_category %}
 			<tr>
-				<td>{{ product_item.name }}</td>
+				<td><a href="{{product_item.get_absolute_url}}">{{ product_item.name }}</a></td>
 				<td>{{ product_item.description }}</td>
-				<td>{{ product_item.price }}</td>
+				<td>${{ product_item.price }}</td>
 			</tr>
 		{% endfor %}
 		</tbody>
