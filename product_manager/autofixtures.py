@@ -18,8 +18,8 @@ class ProductAutoFixture(AutoFixture):
                 "Apples",
                 "Pears",
                 "Lemons"
-                )
-            ),
+            )
+        ),
         'description': generators.ChoicesGenerator(
             values=(
                 "A type of food.",
@@ -27,9 +27,16 @@ class ProductAutoFixture(AutoFixture):
                 "Very tasty!",
                 "Healthy.",
                 "Now on sale!"
-                )
-            ),
-        'price': generators.ChoicesGenerator(values=('15.45', '2.00', '14.00', '10.05')),
+            )
+        ),
+        'price': generators.ChoicesGenerator(
+            values=(
+                '15.45',
+                '2.00',
+                '14.00',
+                '10.05'
+            )
+        ),
     }
 
 register(Product, ProductAutoFixture)
@@ -41,8 +48,8 @@ class CategoryAutoFixture(AutoFixture):
                 "Food",
                 "Fruit",
                 "Veg"
-                )
-            ),
+            )
+        ),
     }
 
 register(Category, CategoryAutoFixture)
