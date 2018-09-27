@@ -24,3 +24,10 @@ Run the following command to generate some test data. You can alter the numeric 
 python manage.py loadtestdata product_manager.Category:3 product_manager.Product:20
 ```
 
+## Generating a superuser
+
+Run the following command to generate a superuser. You can then log in at /admin/ to alter both Product and Category objects.
+
+```
+python manage.py createsuperuser
+```
