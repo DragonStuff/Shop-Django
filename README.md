@@ -1,10 +1,10 @@
 # Sightcorp-Django
 
-Technology used:
+Technologies used:
 
 - Django
 - django-autofixtures (https://github.com/gregmuellegger/django-autofixture) - For generating test data.
-- Materialize CSS - For template styling.
+- Materialize CSS (https://materializecss.com/) - For template styling.
 
 ## How to use this project
 
