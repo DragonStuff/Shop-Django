@@ -16,6 +16,8 @@ This project uses Python 3 and also pip to manage dependencies.
 - `python manage.py migrate`
 - `python manage.py runserver`
 
+You can then access the app at http://127.0.0.1:8080/product/
+
 ## Generating test data
 
 Run the following command to generate some test data. You can alter the numeric values for more or less data.
