@@ -1,4 +1,25 @@
-# Sightcorp-Django
+# Shop-Django
+A simple Django project to manage products.
+
+Product model:
+
+- name
+- description
+- price
+- category
+
+Category model:
+
+- name
+
+Views:
+
+- list all products
+- list all products belonging to a category
+- see product details
+- insert new product
+- delete a product
+- view latest  
 
 Technologies used:
 
