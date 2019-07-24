@@ -1,5 +1,5 @@
 Django>=2
 django-extensions>=2
-djangorestframework==3.7.7
+djangorestframework==3.9.1
 django-crispy-forms==1.7.0
 django-autofixture==0.12.1
